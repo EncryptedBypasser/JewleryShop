@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ExtHang3r</title>
+  <title>ih8school</title>
   <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/datagemgiffy/JewleryShop/refs/heads/main/favicon.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap">
   <style>
@@ -159,41 +159,40 @@
 <body>
 
   <header>
-    <img src="https://raw.githubusercontent.com/datagemgiffy/JewleryShop/refs/heads/main/Logo.png" alt="Logo" class="logo">
-    <h1>ExtHang3r</h1>
+    <img src="https://backendbase.com/i/p/i-hate-school-sticker-f87ac-1_thmb.jpg" alt="Logo" class="logo">
+    <h1>CustomSpeed</h1>
   </header>
 
   <div class="container">
-    <p>ExtHang3r is an exploit that allows ChromeOS users to kill managed extensions after the LTMEAT patch. It remains
-      unpatched in all new ChromeOS versions as of January 2025.</p>
+    <p>ih8school is a Speed Killer tool that kills Extensions.</p>
     <label for="iframeSelect" id="labelForIframeSelect">Select extension:</label>
     <select id="iframeSelect">
     </select>
     <label for="iframeCountSlider" id="labelForIframeSlider" style="margin-top: 20px;">The slider below changes the amount of iframes that will be created. Try it with the default first, and if the extension comes back after a few minutes increase it and try again. Tip: If your computer crashes or freezes for more than 2 minutes, you should definitely decrease the amount of iframes.</label>
-  	<div style="display: flex; align-items: center; gap: 10px; margin: 10px 0;">
+  	<div style="display: flex; align-items: center; gap: 15px; margin: 13px 1;">
   		<input type="range" id="iframeCountSlider" min="100" max="15000" value="2000" step="100" style="flex-grow: 1;">
-  		<span id="iframeCountValue">3000</span>
+  		<span id="iframeCountValue">2500</span>
 	</div>
-    <button onclick="warning();" id="hangButton">Hang Extension!</button>
+    <button onclick="warning();" id="hangButton">Kill</button>
     <button id="killButton" onclick="openExtensionPopup();">Kill Extension!</button>
   </div>
 
   <div class="overlay" id="overlay">
     <div class="spinner"></div>
-    Hanging... (This will take about 1 minute)
+  Subscribe to Bleedache and uh nothing
   </div>
   <div id="killExtensionText"></div>
 
   <footer>
-    <p>Made by <a href="https://github.com/datagemgiffy/">Datagem</a></p>
+    <p>Made by <a href="Youtube.com/@bleedache">Datagem</a></p>
   </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("iframeCountSlider");
     const sliderValueDisplay = document.getElementById("iframeCountValue");
-    const deviceMemory = navigator.deviceMemory || 8; // It will be set to 8gb if you're in the data url, since navigator isnt supported.
-    const defaultIframeCount = Math.round(deviceMemory * 500);  // This changes the default value of the iframe slider based on how much memory your computer has
+    const deviceMemory = navigator.deviceMemory || 8; 
+    const defaultIframeCount = Math.round(deviceMemory * 500);  
     const maxIframeCount = Math.round(deviceMemory * 1500);
 
     slider.value = defaultIframeCount;
@@ -226,39 +225,9 @@
     async function populateSelectOptions() {
       const selectElement = document.getElementById("iframeSelect");
       const extensions = {
-	"Securly (3rd ID)": "chrome-extension://ckecmkbnoanpgplccmnoikfmpcdladkc/fonts/Metropolis.css",
-	"Securly (2nd ID)": "chrome-extension://joflmkccibkooplaeoinecjbmdebglab/fonts/Metropolis.css",
-        "Securly (1st ID)": "chrome-extension://iheobagjkfklnlikgihanlhcddjoihkg/fonts/Metropolis.css",
-        "GoGuardian": "chrome-extension://haldlgldplgnggkjaafhelgiaglafanh/youtube_injection.js",
-        "LANSchool": "chrome-extension://baleiojnjpgeojohhhfbichcodgljmnj/blocked.html",
-        "Linewize": "chrome-extension://ddfbkhpmcdbciejenfcolaaiebnjcbfc/background/assets/pages/default-blocked.html",
-        "Blocksi": "chrome-extension://ghlpmldmjjhmdgmneoaibbegkjjbonbk/pages/blockPage.html",
-        "FortiGuard": "chrome-extension://igbgpehnbmhgdgjbhkkpedommgmfbeao/youtube_injection.js",
-        "Cisco Umbrella": "chrome-extension://jcdhmojfecjfmbdpchihbeilohgnbdci/blocked.html",
-        "ContentKeeper": "chrome-extension://jdogphakondfdmcanpapfahkdomaicfa/img/ckauth19x.png",
-        "CK-Authenticator G3": "chrome-extension://odoanpnonilogofggaohhkdkdgbhdljp/img/ckauth19x.png",
-        "Securly Classroom": "chrome-extension://jfbecfmiegcjddenjhlbhlikcbfmnafd/notfound.html",
-        "Hapara": "chrome-extension://kbohafcopfpigkjdimdcdgenlhkmhbnc/blocked.html",
-        "Hapara (new ID)": "chrome-extension://aceopacgaepdcelohobicpffbbejnfac/blocked.html",
-        "iboss": "chrome-extension://kmffehbidlalibfeklaefnckpidbodff/restricted.html",
-        "Lightspeed Digital Insight Agent": "chrome-extension://njdniclgegijdcdliklgieicanpmcngj/js/wasm_exec.js",
+        "Securly Classroom": "chrome://extensions/?id=hkobaiihndnbfhbkmjjfbdimfbdcppdh/notfound.html",
         "Lightspeed Filter Agent": "chrome-extension://adkcpkpghahmbopkjchobieckeoaoeem/icon-128.png",
-        "Lightspeed Classroom": "chrome-extension://kkbmdgjggcdajckdlbngdjonpchpaiea/assets/icon-classroom-128.png",
-        "InterCLASS Filtering Service": "chrome-extension://jbddgjglgkkneonnineaohdhabjbgopi/pages/message-page.html",
-        "InterSafe GatewayConnection Agent": "chrome-extension://ecjoghccnjlodjlmkgmnbnkdcbnjgden/resources/options.js",
-        "LoiLo Web Filters": "chrome-extension://pabjlbjcgldndnpjnokjakbdofjgnfia/image/allow_icon/shield_green_128x128.png",
-        "Gopher Buddy": "chrome-extension://cgbbbjmgdpnifijconhamggjehlamcif/images/gopher-buddy_128x128_color.png",
-        "LanSchool Web Helper": "chrome-extension://honjcnefekfnompampcpmcdadibmjhlk/blocked.html",
-        "IMTLazarus": "chrome-extension://cgigopjakkeclhggchgnhmpmhghcbnaf/models/model.json",
-        "Impero Backdrop": "chrome-extension://jjpmjccpemllnmgiaojaocgnakpmfgjg/licenses.html",
-        "Mobile Guardian": "chrome-extension://fgmafhdohjkdhfaacgbgclmfgkgokgmb/block.html",
-        "NetSupport School Student": "chrome-extension://gcjpefhffmcgplgklffgbebganmhffje/_locales/lt/messages.json",
-        "Lightspeed Alert Agent": "chrome-extension://gcjpefhffmcgplgklffgbebganmhffje/_locales/lt/in_page.js",
-        "Lockdown Browser": "chrome-extension://fogjeanjfbiombghnmkmmophfeccjdki/manifest.json",
-        "Linewize Filter": "chrome-extension://ifinpabiejbjobcphhaomiifjibpkjlf/background/assets/pages/default-blocked.html",
-        "Borderless Classroom Student": "chrome-extension://kdpgkligilplaanoablcpjahjjeghcl/pages/blockPage.html",
-	"LockDown Browser AP Classroom Edition": "chrome-extension://djpknfecbncogekjnjppojlaipeobkmo/assets/images/icon_128.png",
-	"Lugus School": "chrome-extension://eoobggamkobbcpiojefejfglbfcacgca/assets/images/icon_128.png",
+      
       };
 
       let hasSupportedExtensions = false;
